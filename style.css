@@ -17,3 +17,59 @@ h3{
 p{
     margin-top: 0px;
 }
+
+.nav-header {
+    background: #084e0c;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-header h2 {
+    margin: 0;
+}
+
+.nav-header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+.nav-header nav a:hover {
+    text-decoration: underline;
+}
+
+.sidebar {
+    width: 220px;
+    background: #e1e1e1;
+    padding: 20px;
+    height: calc(100vh - 60px); /* Full height minus header */
+    float: left;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.sidebar ul li a:hover {
+    color: #003366;
+}
+
+.content{
+    margin-top: 0px;
+    margin-left: 20px;
+}
