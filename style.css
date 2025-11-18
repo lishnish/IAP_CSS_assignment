@@ -1,9 +1,14 @@
-body{
-    margin:0;
-
+@font-face {
+    font-family: StackSans;
+    src: url(fonts/StackSansNotch-VariableFont_wght.ttf);
 }
 
-div {
+body{
+    margin:0;
+    font-family: StackSans, Arial;
+}
+
+.content {
     background-color: rgb(44, 139, 44);
     color: white;
     margin: 0 1rem;
@@ -46,7 +51,8 @@ p{
     width: 220px;
     background: #e1e1e1;
     padding: 20px;
-    height: calc(100vh - 60px); /* Full height minus header */
+    min-height: 160vh;
+    height: 100%; /* Full height minus header */
     float: left;
 }
 
@@ -69,7 +75,10 @@ p{
     color: #003366;
 }
 
-.content{
-    margin-top: 0px;
-    margin-left: 20px;
+.maincontent{
+    background-color: white;
+    color: #333;
+    padding-left: 120px;
+    padding-top: 30px;
+    margin-left: 200px;
 }
