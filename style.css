@@ -1,83 +1,82 @@
-@font-face {
-  font-family: StackSans;
-  src: url(fonts/StackSansNotch-VariableFont_wght.ttf);
-}
-
 body {
   margin: 0;
-  font-family: StackSans, Arial;
+  font-family: StackSans, Arial, sans-serif;
   background-color: #f4f4f4;
 }
 
-.content {
-  background-color: rgb(44, 139, 44);
-  color: white;
-  margin: 0;
-}
+h3 { margin-bottom: 0; }
+p  { margin-top: 0; }
 
-h3 {
-  margin-bottom: 0px;
-}
-
-p {
-  margin-top: 0px;
-}
 
 .nav-header {
   background: #084e0c;
-  color: #fff;
-  padding: 15px 30px;
+  color: #f4f4f4;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.nav-header h2 {
-  margin: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  box-sizing: border-box;
+  z-index: 1000;
 }
 
 .nav-header nav a {
   color: #fff;
   text-decoration: none;
   margin-left: 20px;
-  font-weight: 400;
 }
 
-.nav-header nav a:hover {
-  text-decoration: underline;
+
+.toggle-btn {
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
 }
+
 
 .sidebar {
   width: 220px;
-  background: #e1e1e1;
+  background: #f4f4f4;
   padding: 20px;
-  min-height: 200vh;
-  float: left;
+  position: fixed;
+  top: 70px; 
+  left: 0;
+  height: calc(100% - 70px);
+  overflow-y: auto;
+  transition: transform 0.3s ease;
 }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
+.sidebar.open {
+  transform: translateX(-220px);
 }
 
-.sidebar ul li {
-  margin: 15px 0;
+
+.content {
+  margin-top: 70px;      
+  margin-left: 250px;   
+  padding: 20px;
+  background-color: rgb(44, 139, 44);
+  color: white;
+  transition: margin-left 0.3s ease;
 }
 
-.sidebar ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
+.sidebar.open ~ .content {
+  margin-left: 30px;
 }
 
-.sidebar ul li a:hover {
-  color: #003366;
-}
 
 .maincontent {
   background-color: white;
   color: #333;
-  padding-left: 120px;
-  padding-top: 30px;
-  margin-left: 200px;
+  padding: 0px;
+  margin: 0;    
+  box-sizing: border-box;
+}
+.sidebar.open ~ .content .maincontent {
+  margin-left: 0 !important;
 }

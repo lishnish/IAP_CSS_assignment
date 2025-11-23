@@ -12,6 +12,7 @@
         <a href="#Our Overview">Students</a>
         <a href="#Our Overview">Contact</a>
       </nav>
+      <button id="toggle-btn" class="toggle-btn">Menu</button>
     </header>
 
     <aside class="sidebar">
@@ -122,5 +123,13 @@
         </section>
       </main>
     </div>
+    <script>
+  const toggleBtn = document.getElementById("toggle-btn");
+  const sidebar = document.querySelector(".sidebar");
+
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
+  });
+</script>
   </body>
 </html>
