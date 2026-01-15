@@ -123,13 +123,40 @@
         </section>
       </main>
     </div>
-    <script>
+  <script>
   const toggleBtn = document.getElementById("toggle-btn");
   const sidebar = document.querySelector(".sidebar");
+  const content = document.querySelector(".content");
+
+  let isOpen = true;
+
+  
+  sidebar.style.transition = "transform 0.3s ease";
+  content.style.transition = "margin-left 0.3s ease";
 
   toggleBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("open");
+    if (isOpen) {
+  
+      sidebar.style.transform = "translateX(-100%)";
+      content.style.marginLeft = "30px";
+      toggleBtn.textContent = "☰ Menu";
+    } else {
+
+      sidebar.style.transform = "translateX(0)";
+      content.style.marginLeft = "250px";
+      toggleBtn.textContent = "✖ Close";
+    }
+
+    isOpen = !isOpen;
   });
+
+    if (window.innerWidth < 768) {
+    sidebar.style.transform = "translateX(-100%)";
+    content.style.marginLeft = "30px";
+    isOpen = false;
+      }
 </script>
+
+
   </body>
 </html>

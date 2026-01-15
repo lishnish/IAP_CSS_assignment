@@ -43,32 +43,24 @@ p  { margin-top: 0; }
   width: 220px;
   background: #f4f4f4;
   padding: 20px;
+  box-sizing: border-box;
+  overflow-y: hidden;
   position: fixed;
-  top: 70px; 
+  top: 70px;
   left: 0;
   height: calc(100% - 70px);
   overflow-y: auto;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; 
 }
-
-.sidebar.open {
-  transform: translateX(-220px);
-}
-
 
 .content {
-  margin-top: 70px;      
-  margin-left: 250px;   
+  margin-top: 70px;
+  margin-left: 0px;
   padding: 20px;
   background-color: rgb(44, 139, 44);
   color: white;
   transition: margin-left 0.3s ease;
 }
-
-.sidebar.open ~ .content {
-  margin-left: 30px;
-}
-
 
 .maincontent {
   background-color: white;
@@ -76,7 +68,4 @@ p  { margin-top: 0; }
   padding: 0px;
   margin: 0;    
   box-sizing: border-box;
-}
-.sidebar.open ~ .content .maincontent {
-  margin-left: 0 !important;
 }
