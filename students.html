@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Price Form</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 400px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+        input[type="number"] {
+            width: 100px;
+        }
+        tfoot td {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Milk:</td>
+                <td>
+                    <input type="number" min="0" step="1" class="price" oninput="calculateTotal()">
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Bread:</td>
+                <td>
+                    <input type="number" min="0" step="1" class="price" oninput="calculateTotal()">
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Noodles:</td>
+                <td>
+                    <input type="number" min="0" step="1" class="price" oninput="calculateTotal()">
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Cheese:</td>
+                <td>
+                    <input type="number" min="0" step="1" class="price" oninput="calculateTotal()">
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Total</td>
+                <td>
+                    <input type="number" id="total" readonly>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</form>
+
+<script src="Script.js"></script>
+</body>
+</html>
